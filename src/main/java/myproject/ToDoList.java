@@ -3,10 +3,10 @@ package myproject;
 import java.time.LocalDate;
 
 public class ToDoList {
-    private String name;
-    private String description;
-    private String status;
-    private LocalDate dateCompletion;
+    protected String name;
+    protected String description;
+    protected String status;
+    protected LocalDate dateCompletion;
 
     public ToDoList(){}
 

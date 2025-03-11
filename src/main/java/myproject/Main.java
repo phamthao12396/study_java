@@ -14,24 +14,30 @@ public class Main {
         todoList.add(new ToDoList("Task 2", "do java exercise", "inprogress", null));
         todoList.add(new ToDoList("Task 3", "do java exercise", "inprogress", null));
         //Remove a task from the list
-        deleteTask(todoList);
+        //deleteTask(todoList);
 
         //Update the status of a task (pending/completed).
-        updateStatus(todoList);
+        //updateStatus(todoList);
 
         //Display the task list.
-        displayTaskList(todoList);
+        //displayTaskList(todoList);
 
         //Search tasks by name or status.
-        searchTaskList(todoList);
-        
-// App should able to add another tasks type in the future:
-// + PriorityTask
-//     Additional Attributes: priorityLevel (e.g., high, medium, low)
-// + DeadlineTask
-//     Additional Attribute: deadlineDate (a String or Date that stores the deadline of the task).
-//gợi ý là áp dụng tính kế thừa với kế thừa của OOP cho phần mở rộng
+        //searchTaskList(todoList);
 
+        //PriorityTask
+        ArrayList<PriorityTask> prioList = new ArrayList<>();
+        prioList.add(new PriorityTask("PrioTask 1", "java exercise", "inprogress", null, "low"));
+        for (PriorityTask priorityTask : prioList) {
+            System.out.println("Task information: Name = "+ priorityTask.getName() 
+            +", description= "+priorityTask.getDescription()
+            +", Status = "+priorityTask.getStatus()
+            +", Completion Date = "+priorityTask.getDateCompletion()
+            +", Priority= "+priorityTask.getPriority());
+        }
+
+        // + DeadlineTask
+        //     Additional Attribute: deadlineDate (a String or Date that stores the deadline of the task).
 
         sc.close();
     }
