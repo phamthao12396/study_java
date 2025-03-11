@@ -36,9 +36,16 @@ public class Main {
             +", Priority= "+priorityTask.getPriority());
         }
 
-        // + DeadlineTask
-        //     Additional Attribute: deadlineDate (a String or Date that stores the deadline of the task).
-
+        //DeadlineTask
+        ArrayList<DeadlineTask> deadlineTasks = new ArrayList<>();
+        deadlineTasks.add(new DeadlineTask("DeadLine 1","description 1", "Pending", null, LocalDate.of(2025,3,20)));
+        for (DeadlineTask deadlineTask : deadlineTasks) {
+            System.out.println("Task information: Name = "+ deadlineTask.getName() 
+            +", description= "+deadlineTask.getDescription()
+            +", Status = "+deadlineTask.getStatus()
+            +", Completion Date = "+deadlineTask.getDateCompletion()
+            +", Deadline Date = "+deadlineTask.getDeadlineDate());
+        }
         sc.close();
     }
 
