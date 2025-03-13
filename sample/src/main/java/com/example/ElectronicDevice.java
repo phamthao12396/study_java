@@ -2,7 +2,7 @@ package com.example;
 
 public abstract class ElectronicDevice implements Connectable{
     protected String name;
-    protected Boolean status;
+    protected String status;
 
     @Override
     public Boolean connectToWiFi(){
