@@ -1,11 +1,6 @@
 package com.example;
 
-public abstract class ElectronicDevice implements Connectable{
+public abstract class ElectronicDevice{
     protected String name;
     protected String status;
-
-    @Override
-    public Boolean connectToWiFi(){
-        return true;
-    };
 }
